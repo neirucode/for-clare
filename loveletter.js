@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let audio = document.getElementById("background-audio");
     let playButton = document.getElementById("play-button");
 
+    audio.volume = 0.5;
+
     // Try autoplaying the audio
     let playPromise = audio.play();
 
