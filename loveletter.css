@@ -1,0 +1,120 @@
+/* General Page Styling */
+body {
+    background-color: #fae1dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Brush Script MT', cursive;
+}
+
+/* Love Letter Container */
+.love-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 550px;
+    background-color: #eae2b7;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    background-image: url('images/cardboard-texture.jpg');
+    /* Correct file path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-out forwards;
+
+}
+
+/* Love Letter Container */
+.love-letter {
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px;
+    text-wrap: no-wrap;
+    animation: up 4s linear infinite;
+}
+
+/* Responsive Title */
+.love-letter h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    /* Scales between 1.8rem (mobile) and 3rem (large screens) */
+    color: #d62828;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 15px;
+}
+
+/* Responsive Paragraph */
+.love-letter p {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    /* Text scales between 1.2rem and 2rem */
+    color: #003049;
+    font-family: 'Brush Script MT', cursive;
+}
+
+/* Responsive Signature */
+.signature {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-style: italic;
+    color: #d62828;
+}
+
+
+/* Signature Styling */
+.signature {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #d62828;
+}
+
+/* Fade-In and Slide-Up Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Karaoke Magic Effect: Hide text initially */
+.magic-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: letterFade 3s forwards;
+}
+
+/* Letter-by-letter fade-in */
+@keyframes letterFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes up {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
