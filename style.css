@@ -63,6 +63,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
+    user-select: none;
+    /* Prevents text selection */
+    outline: none;
 }
 
 .card:before {

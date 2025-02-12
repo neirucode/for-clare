@@ -29,7 +29,6 @@ body {
     background-blend-mode: multiply;
     transform: translateY(50px);
     animation: fadeInUp 1.5s ease-out forwards;
-
 }
 
 /* Love Letter Container */

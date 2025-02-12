@@ -1,25 +1,26 @@
-$(document).ready(function () {
-    $(".love-container").css("opacity", "0");
-
-    setTimeout(function () {
-        $(".love-container").css("opacity", "1");
+document.addEventListener("DOMContentLoaded", function () {
+    // Smoothly fade in the love letter container
+    let loveContainer = document.querySelector(".love-container");
+    loveContainer.style.opacity = "0";
+    loveContainer.style.transition = "opacity 1.5s ease-in-out"; // Smooth transition
+    setTimeout(() => {
+        loveContainer.style.opacity = "1";
     }, 500);
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // Letter-by-letter animation delay
     const letters = document.querySelectorAll(".magic-text span");
-
     letters.forEach((letter, index) => {
-        letter.style.animationDelay = `${index * 0.05}s`; // Adjust timing here (0.05s per letter)
+        letter.style.animationDelay = `${index * 0.05}s`; // Adjust timing per letter
     });
-});
-document.addEventListener("DOMContentLoaded", function () {
+
+    // Audio handling
     let audio = document.getElementById("background-audio");
     let playButton = document.getElementById("play-button");
 
-    audio.volume = 0.5;
+    // Lower volume for a smoother experience
+    audio.volume = 0.2;
 
-    // Try autoplaying the audio
+    // Attempt autoplay
     let playPromise = audio.play();
 
     if (playPromise !== undefined) {
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Autoplay successful.");
         }).catch(() => {
             console.log("Autoplay blocked. Showing play button.");
-            playButton.style.display = "block"; // Show play button if blocked
+            playButton.style.display = "block"; // Show button if autoplay is blocked
         });
     }
 
