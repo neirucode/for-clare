@@ -43,7 +43,8 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.65;
+    opacity: .8;
+
     /* Adjust opacity (0 = invisible, 1 = full) */
     pointer-events: none;
     /* Prevents interaction */
