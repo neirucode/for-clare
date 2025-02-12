@@ -57,7 +57,7 @@ body {
     top: 5px;
     left: 15px;
     box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
-    background-image: url('images/cardboard-texture.jpg');
+    background-image: url('resources/cardboard-texture.jpg');
     /* Correct file path */
     background-size: cover;
     background-position: center;

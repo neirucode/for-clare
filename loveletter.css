@@ -21,7 +21,7 @@ body {
     padding: 30px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    background-image: url('images/cardboard-texture.jpg');
+    background-image: url('resources/cardboard-texture.jpg');
     /* Correct file path */
     background-size: cover;
     background-position: center;
