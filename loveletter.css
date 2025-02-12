@@ -9,7 +9,6 @@ body {
     font-family: 'Brush Script MT', cursive;
 }
 
-/* Love Letter Container */
 .love-container {
     display: flex;
     justify-content: center;
@@ -21,14 +20,33 @@ body {
     padding: 30px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    background-image: url('resources/cardboard-texture.jpg');
-    /* Correct file path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    background-image:
+        url('resources/eborder.png'),
+        url('resources/cardboard-texture.jpg');
+    background-size: contain, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
     background-blend-mode: multiply;
+    /* Keep both images visible */
+
     transform: translateY(50px);
     animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.love-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('resources/border.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.65;
+    /* Adjust opacity (0 = invisible, 1 = full) */
+    pointer-events: none;
+    /* Prevents interaction */
 }
 
 /* Love Letter Container */
@@ -45,8 +63,17 @@ body {
     font-size: clamp(1.5rem, 4vw, 3rem);
     /* Scales between 1.8rem (mobile) and 3rem (large screens) */
     color: #d62828;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Allura', cursive;
     margin-bottom: 15px;
+
+}
+
+.frincess {
+    background: linear-gradient(to right, #d4af37, #b8860b);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    z-index: 9999;
 }
 
 /* Responsive Paragraph */
@@ -54,7 +81,7 @@ body {
     font-size: clamp(1.2rem, 3vw, 2rem);
     /* Text scales between 1.2rem and 2rem */
     color: #003049;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Allura', cursive;
 }
 
 /* Responsive Signature */
@@ -114,6 +141,6 @@ body {
     }
 
     50% {
-        transform: translateY(-5px);
+        transform: translateY(-1px);
     }
 }
