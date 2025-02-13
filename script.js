@@ -16,7 +16,7 @@ $(window).on("load", function () {
     });
 
     // Click event for card (show loading screen)
-    $('.container').click(function (event) {
+    $('.card').click(function (event) {
         event.preventDefault(); // Prevent immediate navigation
         $('.loading-screen').css({
             'visibility': 'visible',
